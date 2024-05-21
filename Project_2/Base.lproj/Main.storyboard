@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Радуйся каждому дню!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHb-ap-JY9">
+                                <rect key="frame" x="54" y="139" width="285" height="35"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери свой день рождения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyo-h1-OFK">
+                                <rect key="frame" x="72.666666666666686" y="204" width="248" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="fVf-33-bp3">
+                                <rect key="frame" x="37" y="204" width="320" height="216"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="SCg-oa-CBV"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIM-C1-Y3M">
+                                <rect key="frame" x="136.66666666666666" y="440" width="119.99999999999997" height="50"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6un-gp-oxt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="YD2-Xl-vcT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Результат">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEF-eV-f3j"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ты наслаждаешься жизнью уже ... дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pv-nl-JNk">
+                                <rect key="frame" x="51.666666666666657" y="510" width="290" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="riJ-yE-UKC"/>
+                                    <constraint firstAttribute="height" constant="100" id="tB1-yI-2WL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Fyo-h1-OFK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CPT-ok-id6"/>
+                            <constraint firstItem="fVf-33-bp3" firstAttribute="top" secondItem="lHb-ap-JY9" secondAttribute="bottom" constant="30" id="Nl5-2Q-dyh"/>
+                            <constraint firstItem="DIM-C1-Y3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R07-DW-sAo"/>
+                            <constraint firstItem="fVf-33-bp3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VIK-WX-5e5"/>
+                            <constraint firstItem="6Pv-nl-JNk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X8D-DQ-uJw"/>
+                            <constraint firstItem="lHb-ap-JY9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zp5-fb-CvW"/>
+                            <constraint firstItem="lHb-ap-JY9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="bgt-Gp-Syx"/>
+                            <constraint firstItem="DIM-C1-Y3M" firstAttribute="top" secondItem="fVf-33-bp3" secondAttribute="bottom" constant="20" id="e7d-IE-wI1"/>
+                            <constraint firstItem="6Pv-nl-JNk" firstAttribute="top" secondItem="DIM-C1-Y3M" secondAttribute="bottom" constant="20" id="hwt-rt-vHL"/>
+                            <constraint firstItem="Fyo-h1-OFK" firstAttribute="top" secondItem="lHb-ap-JY9" secondAttribute="bottom" constant="30" id="w3Y-BA-ZZv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="6Pv-nl-JNk" id="6Yt-jB-4Zt"/>
+                        <outlet property="resultButton" destination="DIM-C1-Y3M" id="1Hw-06-nSo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
